@@ -7,7 +7,7 @@
     <div>
         {% for employee in employees %}
         <h4>{{ employee.first_name }} {{ employee.patronymic }} {{ employee.last_name }}</h4>
-        <p>дата рождения: {{ employee.date_of_birth }} {{ employee.age }} лет,  должность: {{ employee.post }},  группа должностей: {{ employee.group_employee }}, отдел: {{ employee.department}}</p>
+        <p>дата рождения: {{ employee.birthday }} {{ employee.age }} лет,  должность: {{ employee.post }},  группа должностей: {{ employee.group_employee }}, отдел: {{ employee.department}}</p>
 
         {% endfor %}
     </div>
