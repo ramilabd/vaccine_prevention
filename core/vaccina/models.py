@@ -29,7 +29,7 @@ class Employee(models.Model):
     patronymic = models.CharField('Отчество', max_length=50)
     last_name = models.CharField('Фамилия', max_length=50)
     birthday = models.DateField('Дата рождения')
-    age = models.IntegerField('Возраст')
+    age = models.IntegerField('Возраст', blank=True, null=True)
     post = models.ForeignKey(Position, verbose_name='Должность', on_delete=models.CASCADE)
     group_employee = models.ForeignKey(GroupEmployee,verbose_name='Группа сотрудников', on_delete=models.CASCADE)
     department = models.ForeignKey(Department, verbose_name='Отделение', on_delete=models.CASCADE)
