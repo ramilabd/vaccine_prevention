@@ -4,11 +4,10 @@
 {% block body %}
 <div class="content">
     <h2>Список сотрудников</h2>
-    <div>
+    <div">
         {% for employee in employees %}
-        <h4>{{ employee.first_name }} {{ employee.patronymic }} {{ employee.last_name }}</h4>
-        <p>дата рождения: {{ employee.birthday }} {{ employee.age }} лет,  должность: {{ employee.post }},  группа должностей: {{ employee.group_employee }}, отдел: {{ employee.department}}</p>
-
+        <p><b>{{ employee.first_name }} {{ employee.patronymic }} {{ employee.last_name }}</b>
+            дата рождения: {{ employee.birthday }} {{ employee.age }} лет,  должность: {{ employee.post }},  группа должностей: {{ employee.group_employee }}, отдел: {{ employee.department}}</p>
         {% endfor %}
     </div>
 </div>
