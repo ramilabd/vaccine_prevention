@@ -1,0 +1,15 @@
+{% extends '../base.html' %}
+{% load static %}
+{% block title %} Добавить сотрудника {% endblock title %}
+{% block body %}
+<div class="content">
+    <h2>Добавить сотрудника</h2>
+    <form method='post'>
+        {% csrf_token %}
+        {% for input in form %}
+            {{ input }}<br>
+        {% endfor %}
+        <button type='submit'>Сохранить</button>
+    </form>
+</div>
+{% endblock body %}
